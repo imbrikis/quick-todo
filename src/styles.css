@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+  --main-bg-color: #f9f7f7;
+  --bg-container-color: #dbe2ef;
+  --container-border-color: #3f72af;
+  --text-color: #112d4e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--main-bg-color);
+  line-height: normal;
+}
+
+h1 {
+  margin: 3.2rem auto 0 auto !important;
+  font-size: 4.3rem;
+  text-align: center;
+  width: 27.3rem;
+  height: 7.3rem;
+  padding-top: 0.3rem;
+  letter-spacing: 0.2rem;
+}
+
+.add-item-container {
+  width: 31.7rem;
+  height: 4.3rem;
+  margin: 1.2rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field, .btn {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  font-size: 1.6rem;
+  height: 4.3rem;
+  background-color: var(--bg-container-color);
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.input-field {
+  width: 22.2rem;
+  padding-left: 1.6rem;
+}
+
+.btn {
+  width: 7.9rem;
+  justify-content: center;
+}
+
+.items-container {
+  width: 31.7rem;
+  height: 4.3rem;
+  margin: 1.6rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-container-color);
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  padding-left: 1.6rem;
+}
+
+.delete-item-icon {
+  border: none;
+  background: none;
+  height: 100%;
+  width: 3.2rem;
+}
