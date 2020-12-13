@@ -34,6 +34,11 @@ h1 {
   letter-spacing: 0.2rem;
 }
 
+.app-container {
+  width: 31.7rem;
+  margin: 0 auto;
+}
+
 .add-item-container {
   width: 31.7rem;
   height: 4.3rem;
@@ -78,9 +83,93 @@ h1 {
   padding-left: 1.6rem;
 }
 
+.list-item-text {
+  font-size: 1.2rem;
+}
+
 .delete-item-icon {
   border: none;
   background: none;
   height: 100%;
   width: 3.2rem;
+}
+
+.edit-controls-container {
+  display: inline-block;
+  width: 46.7rem;
+  height: 4.3rem;
+  margin: 1.2rem auto 0 auto;
+  background-color: var(--bg-container-color);
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  z-index: -1;
+  opacity: 1;
+  transition: all 1s;
+}
+
+.not-visible {
+  margin-top: 0;
+  opacity: 0;
+  display: none;
+  z-index: -100;
+}
+
+.visible {
+  top: 50%;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 412px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 80%;
+  }
+
+  .app-container {
+    width: 36.7rem;
+  }
+
+  .add-item-container {
+    width: 36.7rem;
+  }
+
+  .input-field {
+    width: 27.2rem;
+  }
+
+  .items-container {
+    width: 36.7rem;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 90%;
+  }
+
+  .app-container {
+    width: 46.7rem;
+  }
+
+  .add-item-container {
+    width: 46.7rem;
+  }
+
+  .input-field {
+    width: 37.2rem;
+  }
+
+  .items-container {
+    width: 46.7rem;
+  }
+
+  .list-item-text {
+    font-size: 1.5rem;
+  }
 }
