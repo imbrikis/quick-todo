@@ -29,13 +29,8 @@ const App = () => {
 
   const deleteItem = async id => {
     await axios.delete(endpoint + `/items/${id}`) 
+    setIsVisible(false)
     fetchData()
-  }
-
-  const showEditControls = () => {
-    return (
-      <div className="edit-controls-container">EDIT CONTROLS CONTAINER</div>
-    )
   }
 
   useEffect(() => {
@@ -49,15 +44,21 @@ const App = () => {
         <input className="input-field" type="text" value={value} onChange={e => setValue(e.target.value)} placeholder="Enter task item..." />
         <button className="btn" type="submit">add</button>
       </form>
-      <div className={`edit-controls-container ${!isVisible ? "not-visible" : "visible"}`}>EDIT CONTROLS CONTAINER</div>
+
       {
         items.map((item, index) => {
           return (
-            <div className="items-container" key="item._id">
-              <div className="list-item-text">{`${index + 1}. ${item.text}`}</div>
-              <button className="delete-item-icon" onClick={() => setIsVisible(!isVisible)}> {/*onClick={() => deleteItem(item._id)}*/}
-                <i className="pencil alternate icon list-item-icon"></i>
-              </button>
+            <div className={`item-wrapper ${!isVisible ? "" : "item-wrapper-bigger"}`} key="item._id">
+              <div className="item-container">
+                <div className="list-item-text">{`${index + 1}. ${item.text}`}</div>
+                <button className="edit-item-btn" onClick={() => setIsVisible(!isVisible)}> {/*onClick={() => deleteItem(item._id)}*/}
+                  <i class="pencil alternate icon"></i>
+                </button>
+              </div>
+              <div className={`edit-controls-container ${!isVisible ? "not-visible" : "visible"}`}>
+                <i class="save outline icon"></i>
+                <i className="trash alternate outline icon" onClick={() => deleteItem(item._id)}></i> {/* Add confirmation for delete here */}
+              </div>
             </div>
           )
         })
