@@ -52,12 +52,12 @@ const App = () => {
               <div className="item-container">
                 <div className="list-item-text">{`${index + 1}. ${item.text}`}</div>
                 <button className="edit-item-btn" onClick={() => setIsVisible(!isVisible)}> {/*onClick={() => deleteItem(item._id)}*/}
-                  <i class="pencil alternate icon"></i>
+                  <i class="pencil alternate icon icons"></i>
                 </button>
               </div>
               <div className={`edit-controls-container ${!isVisible ? "not-visible" : "visible"}`}>
-                <i class="save outline icon"></i>
-                <i className="trash alternate outline icon" onClick={() => deleteItem(item._id)}></i> {/* Add confirmation for delete here */}
+                <i class="save outline icon icons"></i>
+                <i className="trash alternate outline icon icons" onClick={() => deleteItem(item._id)}></i> {/* Add confirmation for delete here */}
               </div>
             </div>
           )

@@ -122,6 +122,10 @@ h1 {
   transition: all .5s;
 }
 
+.icons {
+  cursor: pointer;
+}
+
 .not-visible {
   margin-top: 0;
   opacity: 0;
