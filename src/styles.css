@@ -48,7 +48,7 @@ h1 {
   justify-content: space-between;
 }
 
-.input-field, .btn {
+.input-field, .add-item-btn {
   font-family: 'Poppins', sans-serif;
   display: inline-block;
   font-size: 1.6rem;
@@ -66,9 +66,14 @@ h1 {
   padding-left: 1.6rem;
 }
 
-.btn {
+.add-item-btn {
   width: 7.9rem;
   justify-content: center;
+  cursor: pointer;
+}
+
+.add-item-btn:hover {
+  background-color: var(--bg-container-color-secondary);
 }
 
 .item-wrapper {

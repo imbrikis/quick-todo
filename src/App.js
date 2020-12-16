@@ -42,7 +42,7 @@ const App = () => {
       <h1>To-Do List</h1>
       <form onSubmit={addItem} className="add-item-container">
         <input className="input-field" type="text" value={value} onChange={e => setValue(e.target.value)} placeholder="Enter task item..." />
-        <button className="btn" type="submit">add</button>
+        <button className="add-item-btn" type="submit">add</button>
       </form>
 
       {
