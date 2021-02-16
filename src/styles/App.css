@@ -1,0 +1,26 @@
+.app-container {
+  width: 31.7rem;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 3.2rem auto 0 auto !important;
+  font-size: 4.3rem;
+  text-align: center;
+  width: 27.3rem;
+  height: 7.3rem;
+  padding-top: 0.3rem;
+  letter-spacing: 0.2rem;
+}
+
+@media (min-width: 640px) {
+  .app-container {
+    width: 36.7rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .app-container {
+    width: 46.7rem;
+  }
+}

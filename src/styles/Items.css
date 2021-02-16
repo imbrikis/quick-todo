@@ -1,0 +1,84 @@
+.item-wrapper {
+  height: 4.3rem;
+  transition: all 0.5s;
+}
+
+.item-container {
+  width: 31.7rem;
+  height: 4.3rem;
+  margin: 1.6rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-container-color);
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  padding-left: 1.6rem;
+}
+
+.list-item-text {
+  font-size: 1.2rem;
+}
+
+.edit-item-btn {
+  border: none;
+  background: none;
+  height: 100%;
+  width: 4.6rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.edit-item-btn:hover {
+  background-color: var(--bg-container-color-secondary);
+}
+
+.edit-controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 4.3rem;
+  margin: 1.2rem auto 0 auto;
+  background-color: var(--bg-container-color);
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  z-index: -1;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.icons {
+  cursor: pointer;
+}
+
+.not-visible {
+  margin-top: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.visible {
+  top: 50%;
+}
+
+.item-wrapper-bigger {
+  height: 10rem;
+}
+
+@media (min-width: 640px) {
+  .item-container {
+    width: 36.7rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .item-container {
+    width: 46.7rem;
+  }
+
+  .list-item-text {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+@import 'App.css';
+@import 'AddItem.css';
+@import 'Items.css';
+
+:root {
+  --main-bg-color: #f9f7f7;
+  --bg-container-color: #dbe2ef;
+  --bg-container-color-secondary: #e3e8f1;
+  --container-border-color: #3f72af;
+  --text-color: #112d4e;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--main-bg-color);
+  line-height: normal;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 412px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 90%;
+  }
+}

@@ -1,0 +1,56 @@
+.add-item-container {
+  width: 31.7rem;
+  height: 4.3rem;
+  margin: 1.2rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field,
+.add-item-btn {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  font-size: 1.6rem;
+  height: 4.3rem;
+  background-color: var(--bg-container-color);
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.input-field {
+  width: 22.2rem;
+  padding-left: 1.6rem;
+}
+
+.add-item-btn {
+  width: 7.9rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-item-btn:hover {
+  background-color: var(--bg-container-color-secondary);
+}
+
+@media (min-width: 640px) {
+  .add-item-container {
+    width: 36.7rem;
+  }
+
+  .input-field {
+    width: 27.2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .add-item-container {
+    width: 46.7rem;
+  }
+
+  .input-field {
+    width: 37.2rem;
+  }
+}
