@@ -91,7 +91,7 @@ const TodoItem = ({ item, index, deleteItem }) => {
         }`}
       >
         <i
-          className="save outline icon icons"
+          className="save outline icon icons save-main-icon"
           onClick={() => setPromptForEdit(true)}
         ></i>
         <i

@@ -58,11 +58,12 @@
 .edit-controls-container {
   background-color: var(--bg-container-color);
   z-index: -1;
+  font-size: 1.5rem;
 }
 
 .prompt-delete {
   background-color: var(--bg-container-color-prompt-delete);
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: relative;
 }
 
@@ -101,11 +102,11 @@
 }
 
 .ban-icon-edit {
-  left: 5rem;
+  left: 8rem;
 }
 
 .save-edit {
-  right: 5rem;
+  right: 8rem;
 }
 
 .not-visible {
@@ -142,9 +143,35 @@
   height: 10rem;
 }
 
+@media (min-width: 412px) {
+  .prompt-edit {
+    font-size: 1.5rem;
+  }
+
+  .ban-icon-edit {
+    left: 4rem;
+  }
+
+  .save-edit {
+    right: 4rem;
+  }
+}
+
 @media (min-width: 640px) {
   .list-item-contents {
     width: 36.7rem;
+  }
+
+  .prompt-edit {
+    font-size: 1.5rem;
+  }
+
+  .ban-icon-edit {
+    left: 5rem;
+  }
+
+  .save-edit {
+    right: 5rem;
   }
 }
 
