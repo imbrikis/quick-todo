@@ -1,0 +1,129 @@
+.item {
+  height: 4.3rem;
+  transition: all 0.5s;
+}
+
+.list-item-contents {
+  width: 31.7rem;
+  height: 4.3rem;
+  margin: 1.6rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-container-color);
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  padding-left: 1.6rem;
+  transition: background-color 0.25s;
+}
+
+.list-item-contents-deleted {
+  background-color: var(--bg-container-color-prompt-delete);
+}
+
+.list-item-text {
+  font-size: 1.2rem;
+}
+
+.edit-item-btn {
+  border: none;
+  background: none;
+  height: 100%;
+  width: 4.6rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.edit-item-btn:hover {
+  background-color: var(--bg-container-color-secondary);
+}
+
+.edit-controls-container,
+.prompt-delete {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4.3rem;
+  margin: 1.2rem auto 0 auto;
+  border: 0.1rem solid var(--container-border-color);
+  border-radius: 0.4rem;
+  justify-content: space-evenly;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.edit-controls-container {
+  background-color: var(--bg-container-color);
+  z-index: -1;
+}
+
+.prompt-delete {
+  background-color: var(--bg-container-color-prompt-delete);
+  font-size: 2rem;
+  position: relative;
+}
+
+.icons {
+  cursor: pointer;
+}
+
+.ban,
+.check {
+  position: absolute !important;
+  transition: all 0.25s;
+}
+
+.ban {
+  left: 5rem;
+}
+
+.check {
+  right: 5rem;
+}
+
+.ban:hover,
+.check:hover {
+  color: rgb(59, 59, 59);
+  font-size: 1.2em;
+}
+
+.not-visible {
+  margin-top: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.visible {
+  top: 50%;
+}
+
+.prompt-not-visible {
+  opacity: 0;
+  z-index: -2;
+  display: none;
+}
+
+.prompt-visible {
+  display: flex;
+}
+
+.item-wrapper-bigger {
+  height: 10rem;
+}
+
+@media (min-width: 640px) {
+  .list-item-contents {
+    width: 36.7rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .list-item-contents {
+    width: 46.7rem;
+  }
+
+  .list-item-text {
+    font-size: 1.5rem;
+  }
+}

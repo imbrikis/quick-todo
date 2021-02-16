@@ -3,11 +3,14 @@
 @import 'App.css';
 @import 'AddItem.css';
 @import 'Items.css';
+@import 'TodoItem.css';
 
 :root {
   --main-bg-color: #f9f7f7;
   --bg-container-color: #dbe2ef;
   --bg-container-color-secondary: #e3e8f1;
+  --bg-container-color-prompt-delete: rgb(255, 157, 157);
+  --bg-container-color-prompt-edit: rgb(255, 237, 133);
   --container-border-color: #3f72af;
   --text-color: #112d4e;
 }

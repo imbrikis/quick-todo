@@ -8,12 +8,15 @@ const endpoint =
 
 const App = () => {
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = async () => {
+    setIsLoading(true);
     const { data, status } = await axios.get(endpoint + '/items');
     if (status === 200) {
       setItems(data);
     }
+    setIsLoading(false);
   };
 
   const addItem = async (item) => {
