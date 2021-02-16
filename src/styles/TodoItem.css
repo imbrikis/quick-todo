@@ -18,7 +18,8 @@
 }
 
 .list-item-contents-deleted {
-  background-color: var(--bg-container-color-prompt-delete);
+  /* background-color: var(--bg-container-color-prompt-delete); */
+  /* This needs to be corrected - change persists after rerendering */
 }
 
 .list-item-text {
@@ -40,7 +41,8 @@
 }
 
 .edit-controls-container,
-.prompt-delete {
+.prompt-delete,
+.prompt-edit {
   display: flex;
   align-items: center;
   width: 100%;
@@ -64,17 +66,25 @@
   position: relative;
 }
 
+.prompt-edit {
+  background-color: var(--bg-container-color-prompt-edit);
+  font-size: 2rem;
+  position: relative;
+}
+
 .icons {
   cursor: pointer;
 }
 
-.ban,
-.check {
+.ban-icon-delete,
+.check,
+.ban-icon-edit,
+.save-edit {
   position: absolute !important;
   transition: all 0.25s;
 }
 
-.ban {
+.ban-icon-delete {
   left: 5rem;
 }
 
@@ -82,10 +92,20 @@
   right: 5rem;
 }
 
-.ban:hover,
-.check:hover {
+.ban-icon-delete:hover,
+.check:hover,
+.ban-icon-edit:hover,
+.save-edit:hover {
   color: rgb(59, 59, 59);
   font-size: 1.2em;
+}
+
+.ban-icon-edit {
+  left: 5rem;
+}
+
+.save-edit {
+  right: 5rem;
 }
 
 .not-visible {
@@ -98,13 +118,23 @@
   top: 50%;
 }
 
-.prompt-not-visible {
+.prompt-delete-not-visible {
   opacity: 0;
   z-index: -2;
   display: none;
 }
 
-.prompt-visible {
+.prompt-delete-visible {
+  display: flex;
+}
+
+.prompt-edit-not-visible {
+  opacity: 0;
+  z-index: -2;
+  display: none;
+}
+
+.prompt-edit-visible {
   display: flex;
 }
 

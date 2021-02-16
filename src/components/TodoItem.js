@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const TodoItem = ({ item, index, deleteItem }) => {
   const [open, setOpen] = useState(false);
   const [promptForDelete, setPromptForDelete] = useState(false);
+  const [promptForEdit, setPromptForEdit] = useState(false);
   const [itemIsBeingDeleted, setItemIsBeingDeleted] = useState(false);
   const ref = useRef();
 
@@ -13,6 +14,7 @@ const TodoItem = ({ item, index, deleteItem }) => {
       }
       setOpen(false);
       setPromptForDelete(false);
+      setPromptForEdit(false);
     };
 
     document.body.addEventListener('click', onBodyClick, { capture: true });
@@ -22,10 +24,6 @@ const TodoItem = ({ item, index, deleteItem }) => {
     };
   }, []);
 
-  const promptDelete = () => {
-    setPromptForDelete(true);
-  };
-
   const confirmDelete = () => {
     deleteItem(item._id);
     setPromptForDelete(false);
@@ -33,12 +31,16 @@ const TodoItem = ({ item, index, deleteItem }) => {
     setItemIsBeingDeleted(true);
   };
 
+  const editTodo = (x) => {
+    console.log(x);
+  };
+
   return (
     <div
       ref={ref}
       key={item._id}
       className={`item ${
-        !open && !promptForDelete ? '' : 'item-wrapper-bigger'
+        !open && !promptForDelete && !promptForEdit ? '' : 'item-wrapper-bigger'
       }`}
     >
       <div
@@ -51,24 +53,50 @@ const TodoItem = ({ item, index, deleteItem }) => {
           <i className="pencil alternate icon icons"></i>
         </button>
       </div>
+
       <div
         className={`prompt-delete ${
-          !promptForDelete ? 'prompt-not-visible' : 'prompt-visible'
+          !promptForDelete
+            ? 'prompt-delete-not-visible'
+            : 'prompt-delete-visible'
         }`}
       >
-        <i class="ban icon icons" onClick={() => setPromptForDelete(false)}></i>
+        <i
+          className="ban icon icons ban-icon-delete"
+          onClick={() => setPromptForDelete(false)}
+        ></i>
         Delete To-do?
-        <i class="check icon icons" onClick={confirmDelete}></i>
+        <i className="check icon icons" onClick={confirmDelete}></i>
       </div>
+
+      <div
+        className={`prompt-edit ${
+          !promptForEdit ? 'prompt-edit-not-visible' : 'prompt-edit-visible'
+        }`}
+      >
+        <i
+          className="ban icon icons ban-icon-edit"
+          onClick={() => setPromptForEdit(false)}
+        ></i>
+        Edit, then click save
+        <i
+          className="save outline icon icons save-edit"
+          onClick={() => editTodo('make me work')}
+        ></i>
+      </div>
+
       <div
         className={`edit-controls-container ${
-          !open || promptForDelete ? 'not-visible' : 'visible'
+          !open || promptForDelete || promptForEdit ? 'not-visible' : 'visible'
         }`}
       >
-        <i className="save outline icon icons"></i>
+        <i
+          className="save outline icon icons"
+          onClick={() => setPromptForEdit(true)}
+        ></i>
         <i
           className="trash alternate outline icon icons"
-          onClick={promptDelete}
+          onClick={() => setPromptForDelete(true)}
         ></i>
       </div>
     </div>
